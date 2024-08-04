@@ -57,6 +57,7 @@ class HashTableBuilder {
         
         return num;
     }
+    /* 
     
     public void print(int index){
         Node cur = hashTable[index].list.getHead();
@@ -67,6 +68,7 @@ class HashTableBuilder {
         //System.out.println();
         
     }
+        */
 
     public int searchKey(String look){
         for(int i = 0; i < tableSize; i++){

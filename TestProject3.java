@@ -32,15 +32,17 @@ public class TestProject3 {
         int choice = 1;
         Scanner in = new Scanner(System.in);
         while(choice >= 1 && choice < 3){
-            System.out.print("MENU:\n1) Print of the entire hashtable\n2) Search for a key\n3) exit the program\n\nMake a selection: ");
+            System.out.print("MENU:\n1) Print of the entire hash table\n2) Search for a key\n3) Exit the program\n\nMake a selection: ");
             choice = in.nextInt();
             in.nextLine();
+
             switch (choice){
                 case 1:
                     for(int i = 0; i < table.tableSize; i++){
                         if(table.hashTable[i] != null){
                             System.out.println((String)table.hashTable[i].keyword);
-                            table.print(i);
+							System.out.println(table.hashTable[i].list.toString());
+                            
                         }   
                     }
                     break;
@@ -51,7 +53,7 @@ public class TestProject3 {
                     int index = table.searchKey(temp);
                     if( index != -1){
                         System.out.println((String)table.hashTable[index].keyword);
-                        table.print(index);
+                        System.out.println(table.hashTable[index].list.toString());
                     }
                     else{
                         System.out.println("No such key exists");
